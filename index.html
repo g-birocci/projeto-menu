@@ -1,142 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rei dos Croassants</title>
+    <title>O Rei dos Croassants</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img class="home" src="fotos/logo/logo-rei.png" alt="Rei dos Croassants" height="50px" width="50px">
         <nav>
             <ul>
                 <li class="navli"><a href="#snack">Snack</a></li>
                 <li class="navli"><a href="#cafeteria">Cafeteria</a></li>
                 <li class="navli"><a href="#crepes">Crepes</a></li>
-                <li class="navli"><a href="#gelado">Sobre</a></li>
-                <li class="navli"><a href="#bebidas">Contato</a></li>
+                <li class="navli"><a href="#sobre">Sobre</a></li>
+                <li class="navli"><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <section id="conteudo">
-            <h2 id="snack">Snack / Combinados</h2>
-            <article class="continside">
-                <ul>
-                    <li>Prego no Prato: 6,50€ <br> <p>(bife, batata frita, salada mista e ovo)</p></li>
-                    <li>Prego no Pão: 4,80€ <br> <p>Pão de água, bife, queijo e fianbre</p></li>
-                    <li>Prego com Queijo da Serra: 4,00€</li> <br>
-                    <li>Hambúrguer: 4,50€ <p>hambúrguer, alface, tomate, queijo, fiambre, ovo e hambúrguer.</p></li>
-                    <li>hambúrguer no Prato: 5,00€</li> <br>
-                    <li>Hambúrguer Especial: 5,50€ <br> <p>Hambúrguer, queijo, fiambre, batata e molho de francesinha</p></li>
-                    <li>Cachorro</li>
-                </ul>
-            </article>
+        <!-- Home section with background image -->
+        <section id="home">
+            <h1>Welcome to O Rei dos Croassants</h1>
+            <p>Basta tomar um café para o seu dia melhorar !!!</p>
+        </section>
 
-            <h2 id="cafeteria">Cafeteria</h2>
+        <!-- Other sections -->
+        <section id="about">
+            <div class="imgabout">
+                <img src="logo-rei.png" alt="Logo" width="80px" height="80px">
+            </div>
+            <div class="about">
+                <h1>O Rei do Croassants</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quisquam quod corrupti praesentium. Obcaecati labore maiores distinctio? Molestias, quia totam animi earum deleniti illum optio delectus repudiandae nulla! Enim, sint.</p>
+            </div>
+        </section>
 
-            <article class="continside">
+        <section id="snack">
+            <h1>Snack</h1>
+            <br>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="snack/prego-prato.jpg" alt="Imagem 1">
+                    <p>Prego no Prato 6,50$</p>
+                    <a href="#card2" class="next-arrow">&rarr;</a>
+                </div>
                 
-                <ul>
-                    <li>Café: 0,90€</li>
-                    <li>Café Duplo: 1,80€</li>
-                    <li>Abatanado: 1,10€</li>
-                    <li>Descafeinado: 0,90€</li>
-                    <li>Carioca: 0,70€</li>
-                    <li>Cappucino: 2,20€</li>
-                    <li>Cevada: 0,80€</li>
-                    <li>Cevada Duplo: 1,40€</li>
-                    <li>1/2 Leite Cevada: 1,15€</li>
-                    <li>Pingo: 0,90€</li>
-                    <li>Carioca Limão: 0,80€</li>
-                    <li>Carioca limão Duplo: 1,10€</li>
-                    <li>Meia de Leite: 1,15€</li>
-                    <li>Copo de Leite: 1,00€</li>
-                    <li>Galão:  1,30€</li>
-                    <li>Chá (camomila): 1,20€</li>
-                    <li>Chá Duplo (camomila): 1,50€</li>
-                    <li>Ucal: 1,80€</li>
-                </ul>
-            <h2 id="cafeteria">Acompanhamento</h2>
-                <ul>
-                    <li>Torrada: $1,35</li>
-                    <li>1/2 Torrada: $0,75</li>
-                    <li>Torrada Rustica: $3,00</li>
-                    <li>1/2 Torrada Rustica: $2,00</li>
-                    <li>Tosta Mista: $2,70</li>
-                    <li>Tosta Rustica:  $4,50</li>
-                    <li>1/2 Tosta Rustica: $3,85</li>
-                    <li>Croassants Misto: $2,30</li>
-                    <li>Croassants com Queijo: $1,80</li>
-                    <li>Croassants com Fiambre: $1,80</li>
-                    <li>Croassants com Manteiga: $1,30</li>
-                    <li>Croassants: $1,15</li>
+                <!-- Card 2 -->
+                <div id="card2" class="card">
+                    <img src="snack/Prego-no-pao.jpg" alt="Imagem 2">
+                    <p>Prego no Paô 4,80$</p>
+                    <a href="#card3" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div id="card3" class="card">
+                    <img src="snack/pregocomqueijo.jpg" alt="Imagem 3">
+                    <p>Prego com queijo da serra 8,00$</p>
+                    <a href="#card4" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div id="card4" class="card">
+                    <img src="snack/hamespecialfran.jpg" alt="Imagem 4">
+                    <p>Hambúrguer Especial 7,00$</p>
+                    <a href="#card5" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div id="card5" class="card">
+                    <img src="snack/hamespecial.jpg" alt="Imagem 5">
+                    <p>Hambúrguer 4,50$</p>
+                    <a href="#card6" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div id="card6" class="card">
+                    <img src="snack/cachorroespecial.jpg" alt="Imagem 6">
+                    <p>Cachorro Especial 7,00$</p>
+                    <a href="#card7" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 7 -->
+                <div id="card7" class="card">
+                    <img src="snack/lanche-misto.jpg" alt="Imagem 7">
+                    <p>Lanche Misto 1,70$</p>
+                    <a href="#card8" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 8 -->
+                <div id="card8" class="card">
+                    <img src="snack/lanche-normal.jpg" alt="Imagem 8">
+                    <p>Lanche Normal 1,60$</p>
+                    <a href="#card9" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 9 -->
+                <div id="card9" class="card">
+                    <img src="snack/saladaatum.jpg" alt="Imagem 9">
+                    <p>Salada de Atum 6,00$</p>
+                    <a href="#card10" class="next-arrow">&rarr;</a>
+                </div>
+                
+                <!-- Card 10 -->
+                <div id="card10" class="card">
+                    <img src="imagem10.jpg" alt="Imagem 10">
+                </div>
+            </div>
 
-                </ul>
-        
-            </article>
-
-            <h2 id="crepes">Crepes</h2>
-
-            <article class="continside">
-                <ul>
-                    <li>Crepes Normal: $4,00</li>
-                    <li>Crepes com uma bola de gelado: $4,00</li>
-                    <li>Crepes com duas bolas de gelado: $4,00</li>
-                    <li>Crepes com Frutas: $4,00</li>
-                </ul>
-            </article>
-
-            <h2 id="gelado">Gelados</h2>
-
-            <article class="continside">
-                <ul>
-                    <li>Olá: $3,00</li>
-                    <li>Morango: $3,00</li>
-                    <li>Guarana: $3,00</li>
-                </ul>
-            </article>
-
-            <h2 id="bebidas">Bebidas</h2>
-
-            <article class="continside">
-                <ul>
-                    <li>Pepsi: $1,65</li>
-                    <li>Pepsi Zero: $1,65</li>
-                    <li>pepsi zero: $1,65</li>
-                    <li>7UP: $1,65</li>
-                    <li>Guarana: $4,00</li>
-                    <li>Sumo Natural de Laranja: $4,00</li>
-                    <li>Sumo Compal de Laranja: $4,00</li>
-                    <li>Sumo Compal de Laranja: $4,00</li>
-                    <li>Sumo Compal de Laranja: $4,00</li>
-                    <li>Sumo Compal de Laranja: $4,00</li>
-                    <li>Sumo Compal de Laranja: $4,00</li>
-                    <li>Àgua 1,5l: $2,00</li>
-                    <li>Àgua 0,5l: $2,00</li>
-                    <li>Àgua das Pedras: $2,00</li>
-                    <li>Frize de Limão: $2,00</li>
-                </ul>
-            </article>
-
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma cafeteria dedicada a oferecer produtos de alta qualidade em um ambiente acolhedor.</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Email: contato@minhacafeteria.com</p>
-            <p>Telefone: 227623148</p>
-        </section>
+        <section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Minha Cafeteria. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>

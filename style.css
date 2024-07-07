@@ -1,79 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+/* Apply smooth scrolling to all elements */
 * {
     margin: 0;
     scroll-behavior: smooth !important;
 }
 
-h2 {
-    text-decoration-line: underline;
-    font-size: 2rem;
-    margin: 15px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+/* Styles for the body */
+body {
+    font-family: Arial, sans-serif;
 }
-header { 
-    background-image: linear-gradient(to right,rgb(255, 216, 216) 2%, rgb(255, 29, 29), red 95%);
-    height: 25px;
-    padding: 20px;
-    font-size: 20px;
-    display: block;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.856);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky; 
+
+/* Styles for the header */
+header {
+    position: fixed;
+    width: 70%;
     z-index: 10;
-    top:0;
+    background-color: rgba(247, 247, 247, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home {
-    margin-left: 120px;
+/* Styles for the navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-nav > ul {
-    padding: 10px;
-    margin-right: 120px;
-    text-align: center;
+/* Styles for the unordered list in the navigation */
+ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    color: white;
-    list-style:none;
-
+    width: 80%;
 }
+
+/* Styles for list items in the navigation */
+.navli {
+    list-style: none;
+}
+
+/* Styles for links in the navigation */
 .navli > a {
-    padding: 10px;
     text-decoration: none;
-    color: white
-}
-
-.navli > a:hover {
     color: black;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-li {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    margin: 2px;
+/* Styles for the home section */
+#home {
+    width: 100vw;
+    height: 450px;
+    background-image: url(frenteloja.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    position: relative;
 }
 
-main {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 227, 227);
-    min-width: 300px;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.699);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+/* Example styles for other sections */
+
+#about {
+    width: 80%;
+    height: 70px;
+    background-color: rgb(255, 207, 207);
+    border-radius: 1px solid black;
+    border: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
-#conteudo {
-    padding: 20px;
-    margin: 0px,40px;
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.next-arrow {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.next-arrow:hover {
+    transform: translateX(5px);
 }
