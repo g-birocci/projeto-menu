@@ -1,115 +1,263 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Rei dos Croassants</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="navli"><a href="#snack">Snack</a></li>
-                <li class="navli"><a href="#cafeteria">Cafeteria</a></li>
-                <li class="navli"><a href="#crepes">Crepes</a></li>
-                <li class="navli"><a href="#sobre">Sobre</a></li>
-                <li class="navli"><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Home section with background image -->
-        <section id="home">
-            <h1>Welcome to O Rei dos Croassants</h1>
-            <p>Basta tomar um café para o seu dia melhorar !!!</p>
-        </section>
-
-        <!-- Other sections -->
-        <section id="about">
-            <div class="imgabout">
-                <img src="logo-rei.png" alt="Logo" width="80px" height="80px">
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+  <div id="back">
+    
+</div>
+<section id="About">
+    <div class="about">
+        <img src="" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptates accusantium, nisi nam molestias deleniti quam ab quidem alias nihil deserunt doloremque blanditiis, ad earum cupiditate optio praesentium laboriosam non.</p>
+    </div>
+</section>
+    <section class="game-section">
+        <h2 class="line-title">Menu</h2>
+        <br>
+        <h3>Snack</h3>
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(photos/snack/cachorro.jpg);">
+            <div class="item-desc">
+              <h3>Cachorro</h3>
+              <p>Pão de cachorro e salchicha</p>
             </div>
-            <div class="about">
-                <h1>O Rei do Croassants</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quisquam quod corrupti praesentium. Obcaecati labore maiores distinctio? Molestias, quia totam animi earum deleniti illum optio delectus repudiandae nulla! Enim, sint.</p>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/cachorroespecial.jpg);">
+            <div class="item-desc">
+              <h3>Cachorro Especial</h3>
+              <p>Pão de cachorro, salchicha com molho de francesinha.</p>
             </div>
-        </section>
-
-        <section id="snack">
-            <h1>Snack</h1>
-            <br>
-            <div class="card-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="snack/prego-prato.jpg" alt="Imagem 1">
-                    <p>Prego no Prato 6,50$</p>
-                    <a href="#card2" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 2 -->
-                <div id="card2" class="card">
-                    <img src="snack/Prego-no-pao.jpg" alt="Imagem 2">
-                    <p>Prego no Paô 4,80$</p>
-                    <a href="#card3" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 3 -->
-                <div id="card3" class="card">
-                    <img src="snack/pregocomqueijo.jpg" alt="Imagem 3">
-                    <p>Prego com queijo da serra 8,00$</p>
-                    <a href="#card4" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 4 -->
-                <div id="card4" class="card">
-                    <img src="snack/hamespecialfran.jpg" alt="Imagem 4">
-                    <p>Hambúrguer Especial 7,00$</p>
-                    <a href="#card5" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 5 -->
-                <div id="card5" class="card">
-                    <img src="snack/hamespecial.jpg" alt="Imagem 5">
-                    <p>Hambúrguer 4,50$</p>
-                    <a href="#card6" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 6 -->
-                <div id="card6" class="card">
-                    <img src="snack/cachorroespecial.jpg" alt="Imagem 6">
-                    <p>Cachorro Especial 7,00$</p>
-                    <a href="#card7" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 7 -->
-                <div id="card7" class="card">
-                    <img src="snack/lanche-misto.jpg" alt="Imagem 7">
-                    <p>Lanche Misto 1,70$</p>
-                    <a href="#card8" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 8 -->
-                <div id="card8" class="card">
-                    <img src="snack/lanche-normal.jpg" alt="Imagem 8">
-                    <p>Lanche Normal 1,60$</p>
-                    <a href="#card9" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 9 -->
-                <div id="card9" class="card">
-                    <img src="snack/saladaatum.jpg" alt="Imagem 9">
-                    <p>Salada de Atum 6,00$</p>
-                    <a href="#card10" class="next-arrow">&rarr;</a>
-                </div>
-                
-                <!-- Card 10 -->
-                <div id="card10" class="card">
-                    <img src="imagem10.jpg" alt="Imagem 10">
-                </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/hamespecial.jpg);">
+            <div class="item-desc">
+              <h3>hamburguer</h3>
+              <p>hambúrguer, alface, tomate, queijo, fiambre, ovo e hambúrguer.</p>
             </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/hamespecialfran.jpg);">
+            <div class="item-desc">
+              <h3>hamburguer Especial</h3>
+              <p>Hambúrguer, queijo, fiambre, batata e molho de francesinha</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/Prego-no-pao.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Pão</h3>
+              <p>Pão de água, bife, queijo e fianbre</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/prego-prato.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Prato</h3>
+              <p>Bife, batata frita, salada mista e ovo.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Pão com Queijo da Serra</h3>
+              <p>Pão de água, bife, queijo da serra e fianbre</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
 
-        <section>
-    </main>
+      <section class="game-section">
+        <h3>Francesinha</h3>
+
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(photos/francesinhas/francesinha-normal.png);">
+            <div class="item-desc">
+              <h3>Francesinha</h3>
+              <p>Bife, salsicha, fiambre, queijo e molho.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/francesinhas/francesinha.jpg);">
+            <div class="item-desc">
+              <h3>Francesinha Especial</h3>
+              <p>Bife, salsicha, fiambre, queijo, batata, ovo e molho</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="game-section">
+        <h3>Coffee</h3>
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Café  0,90$</h3>
+              <p>Café meia chavena</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cheio.jpg);">
+            <div class="item-desc">
+              <h3>Café Duplo</h3>
+              <p>café mais forte</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/abatanado.jpg);">
+            <div class="item-desc">
+              <h3>Abatanado</h3>
+              <p>Café abatanado</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/carioca.jpg);">
+            <div class="item-desc">
+              <h3>Carioca</h3>
+              <p>Aguá quente com raspa de limão.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/capuccino.jpg);">
+            <div class="item-desc">
+              <h3>Cappuccino</h3>
+              <p>Café com chocolate, espuma de leite e canela.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
+            <div class="item-desc">
+              <h3>Cevada</h3>
+              <p>Cevada com Aguá.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
+            <div class="item-desc">
+              <h3>Cevada Dupla</h3>
+              <p>Dobro de cevada.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
+            <div class="item-desc">
+              <h3>1/2 de leite cevada</h3>
+              <p>Leite com Cevada.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
+            <div class="item-desc">
+              <h3>Pingo</h3>
+              <p>Café cheio com um pingo de leite.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
+            <div class="item-desc">
+              <h3>Carioca Limão</h3>
+              <p>Carioca com limão.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Carioca limão duplo</h3>
+              <p>carioca com limão</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Copo de Leite</h3>
+              <p>Copo de leite</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Meia de Leite</h3>
+              <p>Café com leite.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Galão</h3>
+              <p>Café com leite grande.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
+            <div class="item-desc">
+              <h3>Chá</h3>
+              <p>Camomila, preto e erva sidreira.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/coffee/ucal.jpg);">
+            <div class="item-desc">
+              <h3>Ucal</h3>
+              <p>Achocolatado</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="game-section">
+        <h3>Coffee wht</h3>
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(photos/snack/cachorro.jpg);">
+            <div class="item-desc">
+              <h3>Cachorro</h3>
+              <p>Pão de cachorro e salchicha</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/cachorroespecial.jpg);">
+            <div class="item-desc">
+              <h3>Cachorro Especial</h3>
+              <p>Pão de cachorro, salchicha com molho de francesinha.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/hamespecial.jpg);">
+            <div class="item-desc">
+              <h3>hamburguer</h3>
+              <p>hambúrguer, alface, tomate, queijo, fiambre, ovo e hambúrguer.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/hamespecialfran.jpg);">
+            <div class="item-desc">
+              <h3>hamburguer Especial</h3>
+              <p>Hambúrguer, queijo, fiambre, batata e molho de francesinha</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/Prego-no-pao.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Pão</h3>
+              <p>Pão de água, bife, queijo e fianbre</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/prego-prato.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Prato</h3>
+              <p>Bife, batata frita, salada mista e ovo.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
+            <div class="item-desc">
+              <h3>Prego no Pão com Queijo da Serra</h3>
+              <p>Pão de água, bife, queijo da serra e fianbre</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>  
+    <script src="script.js"></script>
 </body>
 </html>
