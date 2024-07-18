@@ -13,21 +13,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
-  background-image: url("photos/background/WhatsApp\ Image\ 2024-07-08\ at\ 22.26.16.jpeg");
-  background-repeat: repeat;
-  background-size: auto;
+  background-color: #e73700;
 }
 
 #back { 
   width: 100%;
   height: 450px;
-  background-image: url("frenteloja.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-       
+  background-image: url("photos/background/zeroback250px.png");
+  background-size: cover;     
 }    
 header {
   position: fixed;
