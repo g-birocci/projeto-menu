@@ -87,8 +87,9 @@ body {
 
 #back { 
   width: 100%;
-  height: 450px;
-  background-image: url("photos/background/zeroback250px.png");
+  background-image: url("photos/background/pexels-untal3d-23158189.jpg");
+  background-attachment: fixed;
+  background-position: right center;
   background-size: cover;     
 }    
 
@@ -133,7 +134,7 @@ h2 {
   font-weight: 700;
   position: relative;
   text-transform: capitalize;
-  color: var(--preto);
+  color: var(--branco);
 }
 
 h3 {
@@ -169,7 +170,6 @@ button {
 
 .line-title::before {
   width: 100%;
-  background: var(--cinza-claro);
 }
 
 .line-title::after {
@@ -182,6 +182,10 @@ button {
 .game-section {
   padding: 60px 50px;
   overflow-x: scroll;
+  background-image: url("photos/background/pexels-untal3d-23158189.jpg");
+  background-attachment: fixed;
+  background-position: right center;
+  background-size: cover; 
 }
 
 ::-webkit-scrollbar {
