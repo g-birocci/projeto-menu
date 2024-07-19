@@ -278,6 +278,11 @@ footer {
 /***** responsive css Start ******/
 
 @media (max-width: 600px) {
+
+  #logo {
+    font-size: 25px;
+  }
+
   #menu {
     display: block;
     position: absolute;
