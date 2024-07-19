@@ -3,17 +3,79 @@
 /******* Fonts Import Start **********/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /********* Fonts Face CSS End **********/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
 
 /******* Common Element CSS Start ******/
 * {
   margin: 0px;
   padding: 0px;
 }
+
+:root {
+  --cor00: white;
+  --cor01: #b3aca4;
+  --cor02: black;
+  --cor03: #181240;
+  --cor04: rgb(255, 60, 60);
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: #e73700;
+  background-color: rgb(255, 94, 94)
+}
+
+.aa {
+  color: var(--cor02);
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.aa:hover {
+  color: var(--cor00);
+  transition: 0,5s;
+}
+
+#logo {
+  color: black;
+  font-size: 2rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#header {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background: var(--cor04);
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+#menu a {
+  display: block;
+  padding: .5rem;
+  font-size: large;
+}
+
+#btn-mob {
+  display: none;
 }
 
 #back { 
@@ -22,59 +84,6 @@ body {
   background-image: url("photos/background/zeroback250px.png");
   background-size: cover;     
 }    
-header {
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 30px;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  width: 100%;
-  height: 30px;
-  background-color: rgb(255, 255, 255);
-  color: #fff;
-  border-radius: 10px;
-  border: 2px solid black;
-}
-
-ul {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-
-li > a {
-  text-decoration: none;
-  color: black;
-  margin: 10px;
-}
-a:hover {
-  color: red;
-}
-
-.about {
-  width: auto;
-  min-width: 70px;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  border: black 2px solid;
-  border-radius: 10px;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .clear {
   clear: both;
@@ -83,10 +92,11 @@ img {
   max-width: 100%;
   border: 0px;
 }
-ul,
-ol {
+
+ul,ol {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -94,6 +104,7 @@ a {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
+
 a:focus,
 a:active,
 a:visited,
@@ -152,6 +163,10 @@ button {
   padding: 60px 50px;
   overflow-x: scroll;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
 .game-section .owl-stage {
   margin: 15px 0;
   display: flex;
@@ -187,7 +202,7 @@ button {
   width: 100%;
   left: 0;
   top: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  
 }
 .game-section .item-desc {
   padding: 0 24px 12px;
@@ -221,9 +236,87 @@ button {
   position: relative;
   z-index: 5;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: var(--cor02);
+  color: var(--cor04);
+  font-size: 12px;
+}
 /******** Middle section CSS End *******/
 
 /***** responsive css Start ******/
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: var(--cor04);
+    height: 0px;
+    transition: .6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid var(--cor02);
+  }
+
+  #btn-mob {
+    display: flex;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    color: var(--cor02);
+  }
+
+  #hamburguer {
+    border-top: 2px solid var(--cor02);
+    width: 20px;
+  }
+
+  #hamburguer::after, #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--cor02);
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   h2 {
