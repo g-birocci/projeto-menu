@@ -24,7 +24,12 @@ function toggleMenu(event){
     event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
   }
 }
-
 btnMob.addEventListener('click', toggleMenu);
 btnMob.addEventListener('touchstart', toggleMenu);
+
+ // Adicionar event listeners para fechar o menu ao clicar em um link
+ const navLinks = document.querySelectorAll('#nav a');
+ navLinks.forEach((link) => {
+     link.addEventListener('click', toggleMenu);
+ });
 
