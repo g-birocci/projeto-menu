@@ -12,32 +12,36 @@
 }
 
 :root {
-  --cor00: white;
-  --cor01: #b3aca4;
-  --cor02: black;
-  --cor03: #181240;
-  --cor04: rgb(255, 60, 60);
+  --preto: #000000;
+  --vermelho-escuro: #8B0000;
+  --vermelho: #FF0000;
+  --vermelho-claro: #FF4D4D;
+  --cinza-escuro: #2F2F2F;
+  --cinza-medio: #555555;
+  --cinza-claro: #A9A9A9;
+  --branco: #FFFFFF;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: rgb(255, 94, 94)
+  background-color: var(--cinza-claro);
 }
 
 .aa {
-  color: var(--cor02);
+  color: var(--preto);
   text-decoration: none;
   font-family: sans-serif;
 }
 
 .aa:hover {
-  color: var(--cor00);
-  transition: 0,5s;
+  color: var(--branco);
+  transition: 0.5s;
 }
 
 #logo {
-  color: black;
+  color: var(--preto);
   font-size: 2rem;
   font-family: "Playwrite HR Lijeva", cursive;
   font-optical-sizing: auto;
@@ -56,7 +60,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   justify-content: space-between;
-  background: var(--cor04);
+  background: var(--vermelho-escuro);
   position: sticky;
   z-index: 10;
   top: 0;
@@ -65,13 +69,14 @@ body {
 #menu {
   display: flex;
   list-style: none;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 #menu a {
   display: block;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: large;
+  color: var(--branco);
 }
 
 #btn-mob {
@@ -88,12 +93,13 @@ body {
 .clear {
   clear: both;
 }
+
 img {
   max-width: 100%;
   border: 0px;
 }
 
-ul,ol {
+ul, ol {
   list-style: none;
 }
 
@@ -112,9 +118,11 @@ a:hover {
   text-decoration: none;
   outline: none;
 }
+
 a:hover {
-  color: #e73700;
+  color: var(--vermelho);
 }
+
 h2 {
   margin-bottom: 48px;
   padding-bottom: 16px;
@@ -123,15 +131,20 @@ h2 {
   font-weight: 700;
   position: relative;
   text-transform: capitalize;
+  color: var(--preto);
 }
+
 h3 {
   margin: 0 0 10px;
   font-size: 28px;
   line-height: 36px;
+  color: var(--preto);
 }
+
 button {
   outline: none !important;
 }
+
 /******* Common Element CSS End *********/
 
 /* -------- title style ------- */
@@ -139,6 +152,7 @@ button {
   position: relative;
   width: 400px;
 }
+
 .line-title::before,
 .line-title::after {
   content: "";
@@ -148,13 +162,15 @@ button {
   height: 4px;
   border-radius: 2px;
 }
+
 .line-title::before {
   width: 100%;
-  background: #f2f2f2;
+  background: var(--cinza-claro);
 }
+
 .line-title::after {
   width: 32px;
-  background: #e73700;
+  background: var(--vermelho);
 }
 
 /******* Middle section CSS Start ******/
@@ -167,12 +183,13 @@ button {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
 .game-section .owl-stage {
   margin: 15px 0;
   display: flex;
   display: -webkit-flex;
-  
 }
+
 .game-section .item {
   margin: 0 15px 60px;
   width: 320px;
@@ -181,7 +198,7 @@ button {
   display: -webkit-flex;
   align-items: flex-end;
   -webkit-align-items: flex-end;
-  background: #343434 no-repeat center center / cover;
+  background: var(--cinza-escuro) no-repeat center center / cover;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
@@ -189,11 +206,13 @@ button {
   -webkit-transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
+
 .game-section .item.active {
   width: 500px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
+
 .game-section .item:after {
   content: "";
   display: block;
@@ -202,11 +221,11 @@ button {
   width: 100%;
   left: 0;
   top: 0;
-  
 }
+
 .game-section .item-desc {
   padding: 0 24px 12px;
-  color: #fff;
+  color: var(--branco);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -215,10 +234,12 @@ button {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
+
 .game-section .item.active .item-desc {
   transform: none;
   -webkit-transform: none;
 }
+
 .game-section .item-desc p {
   opacity: 0;
   -webkit-transform: translateY(32px);
@@ -226,11 +247,13 @@ button {
   transition: all 0.4s ease-in-out 0.2s;
   -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
+
 .game-section .item.active .item-desc p {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
+
 .game-section .owl-theme.custom-carousel .owl-dots {
   margin-top: -20px;
   position: relative;
@@ -242,8 +265,8 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: var(--cor02);
-  color: var(--cor04);
+  background: var(--cinza-escuro);
+  color: var(--branco);
   font-size: 12px;
 }
 /******** Middle section CSS End *******/
@@ -257,9 +280,9 @@ footer {
     width: 100%;
     top: 70px;
     right: 0px;
-    background: var(--cor04);
+    background: var(--vermelho-escuro);
     height: 0px;
-    transition: .6s;
+    transition: 0.6s;
     z-index: 1000;
     visibility: hidden;
     overflow-y: hidden;
@@ -274,22 +297,22 @@ footer {
   #menu a {
     padding: 1rem 0;
     margin: 0 1rem;
-    border-bottom: 2px solid var(--cor02);
+    border-bottom: 2px solid var(--branco);
   }
 
   #btn-mob {
     display: flex;
-    padding: .4rem 1rem;
+    padding: 0.4rem 1rem;
     font-size: 1rem;
     border: none;
     background: none;
     cursor: pointer;
-    gap: .5rem;
-    color: var(--cor02);
+    gap: 0.5rem;
+    color: var(--branco);
   }
 
   #hamburguer {
-    border-top: 2px solid var(--cor02);
+    border-top: 2px solid var(--branco);
     width: 20px;
   }
 
@@ -298,9 +321,9 @@ footer {
     display: block;
     width: 20px;
     height: 2px;
-    background: var(--cor02);
+    background: var(--branco);
     margin-top: 5px;
-    transition: .3s;
+    transition: 0.3s;
     position: relative;
   }
 
