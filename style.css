@@ -1,11 +1,9 @@
 @charset "utf-8";
-
 /******* Fonts Import Start **********/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /********* Fonts Face CSS End **********/
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
 
-/******* Common Element CSS Start ******/
 * {
   margin: 0px;
   padding: 0px;
@@ -148,8 +146,6 @@ button {
   outline: none !important;
 }
 
-
-
 /******* Common Element CSS End *********/
 
 /* -------- title style ------- */
@@ -235,6 +231,7 @@ button {
   padding: 0 24px 12px;
   color: var(--branco);
   position: relative;
+  background-image: linear-gradient(red);
   z-index: 1;
   overflow: hidden;
   transform: translateY(calc(100% - 54px));
@@ -367,6 +364,10 @@ footer {
   /* -------- Landing page ------- */
   .game-section {
     padding: 50px 30px;
+    background-image: url("photos/background/back600.jpg");
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: cover; 
   }
   .game-section .item {
     margin: 0 12px 60px;
