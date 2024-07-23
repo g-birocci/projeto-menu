@@ -265,6 +265,82 @@ button {
   z-index: 5;
 }
 
+#contact {
+  padding: 0 10rem;
+}
+
+#contact > h3 {
+  text-align: center;
+  color: var(--branco);
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.containercont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  background-color: var(--cinza-escuro);
+  padding: 2rem;
+  width: 50rem;
+  height: auto;
+}
+
+form > h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+#contact .containercont .map {
+  width: 100%;
+  flex: 1.45;
+  object-fit: cover;
+}
+
+.inputform {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  margin-top: 1rem;
+  background-color: var(--preto);
+}
+
+.inputform > span {
+  font-size: 1.5rem;
+  color: var(--branco);
+}
+
+.inputform > input {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--preto);
+  border: none; /* Adicionei esta linha para remover a borda padrão */
+  color: var(--branco); /* Adicionei esta linha para a cor do texto */
+}
+
+.inputform button {
+  margin-top: 2rem;
+  background-color: var(--vermelho);
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem; /* Corrigido para tamanhos apropriados */
+  cursor: pointer;
+  text-align: center;
+  color: var(--branco);
+  border: none; /* Adicionei esta linha para remover a borda padrão */
+}
+
+.inputform button:hover {
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+
+
 footer {
   display: flex;
   justify-content: center;
