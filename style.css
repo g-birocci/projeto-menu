@@ -8,7 +8,7 @@
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth !important;
-  transition: 1s;
+  transition: 1.45s;
 }
 
 :root {
@@ -19,7 +19,7 @@
   --cinza-escuro: #2F2F2F;
   --cinza-medio: #555555;
   --cinza-claro: #A9A9A9;
-  --branco: #FFFFFF;
+  --branco: #faeaea;
 }
 
 body {
@@ -85,7 +85,7 @@ body {
 
 #back { 
   width: 100%;
-  background-image: url("photos/background/pexels-untal3d-23158189.jpg");
+  background-color: var(--branco);
   background-attachment: fixed;
   background-position: right center;
   background-size: cover;     
@@ -178,10 +178,7 @@ button {
 .game-section {
   padding: 60px 50px;
   overflow-x: scroll;
-  background-image: url("photos/background/pexels-untal3d-23158189.jpg");
-  background-attachment: fixed;
-  background-position: right center;
-  background-size: cover; 
+  background-color: var(--branco); 
 }
 
 ::-webkit-scrollbar {
@@ -231,7 +228,6 @@ button {
   padding: 0 24px 12px;
   color: var(--branco);
   position: relative;
-  background-image: linear-gradient(red);
   z-index: 1;
   overflow: hidden;
   transform: translateY(calc(100% - 54px));
@@ -241,6 +237,8 @@ button {
 }
 
 .game-section .item.active .item-desc {
+  width: 100%;
+  background-color: var(--vermelho-escuro);
   transform: none;
   -webkit-transform: none;
 }
@@ -340,7 +338,16 @@ form > h3 {
   transition: 0.3s all;
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+}
 
+.socialcont > a {
+  padding: 0 1rem;
+}
 
 footer {
   display: flex;
@@ -355,7 +362,7 @@ footer {
 
 /***** responsive css Start ******/
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
  
   #logo {
     font-size: 25px;
@@ -438,7 +445,6 @@ footer {
     line-height: 32px;
   }
 
-  /* -------- Landing page ------- */
   .game-section {
     padding: 50px 30px;
     background-image: url("photos/background/back600.jpg");
@@ -507,7 +513,6 @@ footer {
     width: 250px;
   }
 
-  /* -------- Landing page ------- */
   .game-section {
     padding: 30px 15px 20px;
   }
@@ -526,4 +531,9 @@ footer {
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
   }
+
+#contact {
+  padding: 0 2rem;   
+  }
+
 }
