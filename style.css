@@ -263,6 +263,10 @@ button {
   z-index: 5;
 }
 
+.owl-nav {
+  display: none;
+}
+
 #contact {
   padding: 0 10rem;
 }
