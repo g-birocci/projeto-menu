@@ -13,7 +13,7 @@
 
 :root {
   --preto: #000000;
-  --vermelho-escuro: #8B0000;
+  --vermelho-escuro: #DB0008;
   --vermelho: #FF0000;
   --vermelho-claro: #FF4D4D;
   --cinza-escuro: #2F2F2F;
@@ -26,7 +26,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: var(--cinza-claro);
+  background-color: white;
 }
 
 .aa {
@@ -85,7 +85,7 @@ body {
 
 #back { 
   width: 100%;
-  background-color: var(--branco);
+  background-color: white;
   background-attachment: fixed;
   background-position: right center;
   background-size: cover;     
@@ -146,39 +146,16 @@ button {
   outline: none !important;
 }
 
-/******* Common Element CSS End *********/
-
-/* -------- title style ------- */
-.line-title {
-  position: relative;
-  width: 400px;
+.title {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  font-size: 2rem;
 }
 
-.line-title::before,
-.line-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  border-radius: 2px;
-}
-
-.line-title::before {
-  width: 100%;
-}
-
-.line-title::after {
-  width: 32px;
-  background: var(--vermelho);
-}
-
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
 .game-section {
   padding: 60px 50px;
   overflow-x: scroll;
-  background-color: var(--branco); 
+  background-color: white; 
 }
 
 ::-webkit-scrollbar {
@@ -334,7 +311,7 @@ form > h3 {
   cursor: pointer;
   text-align: center;
   color: var(--branco);
-  border: none; /* Adicionei esta linha para remover a borda padrão */
+  
 }
 
 .inputform button:hover {
@@ -451,10 +428,6 @@ footer {
 
   .game-section {
     padding: 50px 30px;
-    background-image: url("photos/background/back600.jpg");
-    background-attachment: fixed;
-    background-position: right center;
-    background-size: cover; 
   }
   .game-section .item {
     margin: 0 12px 60px;
@@ -536,7 +509,7 @@ footer {
     -webkit-transform: translateY(calc(100% - 42px));
   }
 
-#contact {
+  #contact {
   padding: 0 2rem;   
   }
 
