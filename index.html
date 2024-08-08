@@ -431,7 +431,6 @@
       </section>
 
       <section id="contact">
-        <h3 class="title">Contato</h3>
         <div class="containercont">
             <iframe 
                 class="map" 
@@ -440,25 +439,27 @@
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <form>
-                <h3>Entrar em Contato</h3>
-                <div class="inputform">
-                    <span><ion-icon name="person"></ion-icon></span>
-                    <input type="text" placeholder="Nome">
-                </div><!--inputform-->
-    
-                <div class="inputform">
-                    <span><ion-icon name="paper-plane"></ion-icon></span>
-                    <input type="email" placeholder="Email">
-                </div><!--inputform-->
-    
-                <div class="inputform">
-                    <span><ion-icon name="call"></ion-icon></span>
-                    <input type="tel" placeholder="Número">
-                </div><!--inputform-->
-    
-                <button type="submit">Enviar Pedido</button>
-            </form>
+          
+            <form action="https://formsubmit.co/reidoscroissantsde.aguda@gmail.com" method="POST">
+                  <h3>Entrar em Contato</h3>
+                  <div class="inputform">
+                      <span><ion-icon name="person"></ion-icon></span>
+                      <input type="text" name="Nome" placeholder="Digite seu nome:" required>
+                  </div>
+                  <div class="inputform">
+                      <span><ion-icon name="paper-plane"></ion-icon></span>
+                      <input type="email" name="Email" placeholder="Digite o seu email:" required>
+                  </div>
+                  <div class="inputform">
+                      <textarea name="Escreva a sua mensagem:" id="" cols="30" rows="10" required></textarea>
+                  </div>
+                  <button class="botonform" type="submit">Enviar Mensagem</button>
+
+                  <input type="hidden" name="_subject" value="Novo contato!">
+                  <input type="text" name="_honey" style="display:none">
+                  <input type="hidden" name="_captcha" value="false">
+             </form>
+
         </div>
     </section>
 
