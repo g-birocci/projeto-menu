@@ -631,14 +631,17 @@ footer {
 /***** responsive css Start ******/
 
 @media (max-width: 650px) {
- 
   #logo {
-    font-size: 25px;
+    font-size: 20px;
+  }
+
+  #logo img {
+    height: 40px;
   }
 
   #menu {
     display: block;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 70px;
     right: 0;
@@ -648,24 +651,122 @@ footer {
     visibility: hidden;
     overflow-y: hidden;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   #nav.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
+    padding: 1rem 0;
   }
 
   #menu a {
-    padding: 1rem;
-    margin: 0 1rem;
+    padding: 1.2rem 2rem;
+    margin: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #menu a::after {
+    content: '→';
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  #menu a:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
   }
 
   #btn-mob {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  #hamburguer {
+    width: 24px;
+    height: 2px;
+    background: var(--branco);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--branco);
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  #hamburguer::before {
+    top: -8px;
+  }
+
+  #hamburguer::after {
+    bottom: -8px;
+  }
+
+  #nav.active #hamburguer {
+    transform: rotate(45deg);
+  }
+
+  #nav.active #hamburguer::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  #nav.active #hamburguer::after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  /* Melhorias para outras seções no mobile */
+  .hero-content h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .special-card {
+    margin: 0 1rem;
+  }
+
+  .about-content {
+    padding: 0 1rem;
+  }
+
+  .feature {
+    margin: 0 1rem;
+  }
+
+  .containercont {
+    padding: 0 1rem;
+  }
+
+  form {
+    margin: 0 1rem;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
   }
 }
 
@@ -1395,4 +1496,20 @@ footer {
 .divider:hover ion-icon {
   transform: scale(1.2);
   opacity: 1;
+}
+
+/* Adicionar animação suave para o menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#menu.active {
+  animation: slideDown 0.3s ease forwards;
 }

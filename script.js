@@ -13,36 +13,47 @@ $(".custom-carousel").owlCarousel({
 
   const btnMobile = document.getElementById('btn-mob');
   const nav = document.getElementById('nav');
+  const menu = document.getElementById('menu');
 
-function toggleMenu(event){
+function toggleMenu(event) {
   if (event.type === 'touchstart') event.preventDefault();
+  
+  // Toggle classes
   nav.classList.toggle('active');
+  menu.classList.toggle('active');
+  
+  // Update ARIA attributes
   const active = nav.classList.contains('active');
-  event.currentTarget.setAttribute('aria-expanded', active);
-  if (active) {
-    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-  } else {
-    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
-  }
+  btnMobile.setAttribute('aria-expanded', active);
+  btnMobile.setAttribute('aria-label', active ? 'Fechar Menu' : 'Abrir Menu');
+  
+  // Prevent body scroll when menu is open
+  document.body.style.overflow = active ? 'hidden' : '';
 }
+
+// Add event listeners
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-// Fechar menu ao clicar em um link
+// Close menu when clicking a link
 document.querySelectorAll('#menu a').forEach(link => {
   link.addEventListener('click', () => {
     nav.classList.remove('active');
+    menu.classList.remove('active');
     btnMobile.setAttribute('aria-expanded', 'false');
     btnMobile.setAttribute('aria-label', 'Abrir Menu');
+    document.body.style.overflow = '';
   });
 });
 
-// Fechar menu ao clicar fora
+// Close menu when clicking outside
 document.addEventListener('click', (event) => {
   if (!nav.contains(event.target) && !btnMobile.contains(event.target)) {
     nav.classList.remove('active');
+    menu.classList.remove('active');
     btnMobile.setAttribute('aria-expanded', 'false');
     btnMobile.setAttribute('aria-label', 'Abrir Menu');
+    document.body.style.overflow = '';
   }
 });
 
