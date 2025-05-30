@@ -1,486 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rei Dos Croissants</title>
+    <link rel="icon" type="image/png" href="photos/favicon.png">
+    <link rel="apple-touch-icon" href="photos/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    
 </head>
 <body>
   <header id="header">
-    <a id="logo" href="">Rei Dos Croissants</a>
+    <a id="logo" href="index.html">
+      <img src="photos/background/zeroback250px.png" alt="Logo Rei Dos Croissants">
+      Rei Dos Croissants
+    </a>
     <nav id="nav">
       <button aria-label="Abrir Menu" id="btn-mob" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-        Menu <span id="hamburguer"></span>
+        <span id="hamburguer"></span>
+        Menu
       </button>
       <ul id="menu" role="menu">
-        <li><a class="aa" href="#cafetaria">Cafetaria</a></li>
-        <li><a class="aa" href="#snack">Snack</a></li>
-        <li><a class="aa" href="#pastryshop">Pastelaria</a></li>
-        <li><a class="aa" href="#bakery">Padaria</a></li>
-        <li><a class="aa" href="#drinks">Bebidas</a></li>
-        <li><a class="aa" href="#contact">Contatos</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="lojas.html#stores">Lojas</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
-  
   </header>
+
   <div id="back">
-    
-    <section id="cafetaria" class="game-section">
-        <br>
-        <h3 class="title">Cafetaria</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/snack/cachorro.jpg);">
-            <div class="item-desc">
-              <h3>Cachorro</h3>
-              <p>Pão de cachorro e salchicha</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/cachorroespecial.jpg);">
-            <div class="item-desc">
-              <h3>Cachorro Especial</h3>
-              <p>Pão de cachorro, salchicha com molho de francesinha.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/hamespecial.jpg);">
-            <div class="item-desc">
-              <h3>hamburguer</h3>
-              <p>hambúrguer, alface, tomate, queijo, fiambre, ovo e hambúrguer.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/hamespecialfran.jpg);">
-            <div class="item-desc">
-              <h3>hamburguer Especial</h3>
-              <p>Hambúrguer, queijo, fiambre, batata e molho de francesinha</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/Prego-no-pao.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Pão</h3>
-              <p>Pão de água, bife, queijo e fianbre</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/prego-prato.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Prato</h3>
-              <p>Bife, batata frita, salada mista e ovo.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Pão com Queijo da Serra</h3>
-              <p>Pão de água, bife, queijo da serra e fianbre</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
+    <section id="inicio" class="hero-section">
+      <div class="hero-content">
+        <h1>Bem-vindo ao Rei Dos Croissants</h1>
+        <p>Os melhores croissants e café da região</p>
+        <a href="menu.html" class="cta-button">Ver Menu</a>
+      </div>
+    </section>
 
-      <section id="snack" class="game-section">
-        <h3 class="title">Snack</h3>
+    <section class="daily-specials">
+      <h3>Especialidades do Dia</h3>
+      <div class="specials-container">
+        <div class="special-card">
+          <div class="special-image">
+            <img src="photos/coffee/capuccino.jpg" alt="Cappuccino Especial">
+          </div>
+          <div class="special-content">
+            <h4>Cappuccino Especial</h4>
+            <p>Nosso cappuccino artesanal com canela e chocolate belga</p>
+            <span class="price">3,50€</span>
+          </div>
+        </div>
+        <div class="special-card">
+          <div class="special-image">
+            <img src="photos/coffee/normal.jpg" alt="Café da Casa">
+          </div>
+          <div class="special-content">
+            <h4>Café da Casa</h4>
+            <p>Grãos selecionados, torrados na hora</p>
+            <span class="price">1,20€</span>
+          </div>
+        </div>
+        <div class="special-card">
+          <div class="special-image">
+            <img src="photos/coffee/cheio.jpg" alt="Croissant Especial">
+          </div>
+          <div class="special-content">
+            <h4>Croissant Especial</h4>
+            <p>Recheado com chocolate belga e amêndoas</p>
+            <span class="price">2,80€</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/francesinhas/francesinha-normal.png);">
-            <div class="item-desc">
-              <h3>Francesinha</h3>
-              <p>Bife, salsicha, fiambre, queijo e molho.</p>
-            </div>
+    <section class="about-section">
+      <div class="about-content">
+        <h3>Nossa História</h3>
+        <p>Desde 2010, o Rei Dos Croissants tem sido sinônimo de qualidade e tradição. Nossos grãos são cuidadosamente selecionados e torrados diariamente para garantir o melhor sabor em cada xícara.</p>
+        <div class="features">
+          <div class="feature">
+            <ion-icon name="cafe"></ion-icon>
+            <h4>Café Fresco</h4>
+            <p>Torrado diariamente</p>
           </div>
-          <div class="item" style="background-image: url(photos/francesinhas/francesinha.jpg);">
-            <div class="item-desc">
-              <h3>Francesinha Especial</h3>
-              <p>Bife, salsicha, fiambre, queijo, batata, ovo e molho</p>
-            </div>
+          <div class="feature">
+            <ion-icon name="time"></ion-icon>
+            <h4>Horário Estendido</h4>
+            <p>Das 7h às 20h</p>
           </div>
+          <div class="feature">
+            <ion-icon name="heart"></ion-icon>
+            <h4>Ambiente Acolhedor</h4>
+            <p>Local perfeito para relaxar</p>
           </div>
         </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="pastryshop" class="game-section">
-        <h3 class="title">Pastelaria</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Café  0,90$</h3>
-              <p>Café meia chavena</p>
-            </div>
+    <section class="about-section">
+      <div class="about-content">
+        <h3>Seja um Revendedor</h3>
+        <p>Fabricamos nossos próprios produtos e estamos abertos a parcerias com revendedores.</p>
+        <div class="features">
+          <div class="feature">
+            <ion-icon name="business"></ion-icon>
+            <h4>Produtos Próprios</h4>
+            <p>Fabricamos todos os nossos produtos com qualidade premium</p>
           </div>
-          <div class="item" style="background-image: url(photos/coffee/cheio.jpg);">
-            <div class="item-desc">
-              <h3>Café Duplo</h3>
-              <p>café mais forte</p>
-            </div>
+          <div class="feature">
+            <ion-icon name="trending-up"></ion-icon>
+            <h4>Oportunidade de Negócio</h4>
+            <p>Preços competitivos e condições especiais para revendedores</p>
           </div>
-          <div class="item" style="background-image: url(photos/coffee/abatanado.jpg);">
-            <div class="item-desc">
-              <h3>Abatanado</h3>
-              <p>Café abatanado</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/carioca.jpg);">
-            <div class="item-desc">
-              <h3>Carioca</h3>
-              <p>Aguá quente com raspa de limão.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/capuccino.jpg);">
-            <div class="item-desc">
-              <h3>Cappuccino</h3>
-              <p>Café com chocolate, espuma de leite e canela.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
-            <div class="item-desc">
-              <h3>Cevada</h3>
-              <p>Cevada com Aguá.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
-            <div class="item-desc">
-              <h3>Cevada Dupla</h3>
-              <p>Dobro de cevada.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
-            <div class="item-desc">
-              <h3>1/2 de leite cevada</h3>
-              <p>Leite com Cevada.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
-            <div class="item-desc">
-              <h3>Pingo</h3>
-              <p>Café cheio com um pingo de leite.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/cevada.jpg);">
-            <div class="item-desc">
-              <h3>Carioca Limão</h3>
-              <p>Carioca com limão.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Carioca limão duplo</h3>
-              <p>carioca com limão</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Copo de Leite</h3>
-              <p>Copo de leite</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Meia de Leite</h3>
-              <p>Café com leite.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Galão</h3>
-              <p>Café com leite grande.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/normal.jpg);">
-            <div class="item-desc">
-              <h3>Chá</h3>
-              <p>Camomila, preto e erva sidreira.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee/ucal.jpg);">
-            <div class="item-desc">
-              <h3>Ucal</h3>
-              <p>Achocolatado</p>
-            </div>
-          </div>
+          <div class="feature">
+            <ion-icon name="handshake"></ion-icon>
+            <h4>Parceria</h4>
+            <p>Suporte completo para seus negócios</p>
           </div>
         </div>
-        </div>
-      </section>
+        <a href="#contact" class="cta-button">Entre em Contato</a>
+      </div>
+    </section>
 
-      <section id="bakery" class="game-section">
-        <h3 class="title">Padaria</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/coffee-with/torrada.jpg);">
-            <div class="item-desc">
-              <h3>Torrada</h3>
-              <p>Pão torrada com manteiga</p>
-            </div>
+    <section id="contact">
+      <h3>Entre em Contato</h3>
+      <div class="containercont">
+        <iframe 
+          class="map" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.890815447118!2d-8.656040425053737!3d41.049516716886274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd247a0ec409636d%3A0x91a47959b17898da!2sO%20Rei%20Dos%20Croissants!5e0!3m2!1spt-PT!2spt!4v1721750058307!5m2!1spt-PT!2spt" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        
+        <form action="https://formsubmit.co/reidoscroissantsde.aguda@gmail.com" method="POST">
+          <h3>Envie sua Mensagem</h3>
+          <div class="inputform">
+            <span><ion-icon name="person"></ion-icon></span>
+            <input type="text" name="Nome" placeholder="Seu nome" required>
           </div>
-          <div class="item" style="background-image: url(photos/coffee-with/meia-torrada.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada</h3>
-              <p>Meio pão torrado com manteiga.</p>
-            </div>
+          <div class="inputform">
+            <span><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="Email" placeholder="Seu email" required>
           </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>Pão torrado com manteiga e salada com especiarias.</p>
-            </div>
+          <div class="inputform">
+            <span><ion-icon name="call"></ion-icon></span>
+            <input type="tel" name="Telefone" placeholder="Seu telefone (opcional)">
           </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada Rustica</h3>
-              <p>Meio pão torrado com manteiga e salada com especiarias.</p>
-            </div>
+          <div class="inputform">
+            <span><ion-icon name="chatbubbles"></ion-icon></span>
+            <textarea name="Mensagem" placeholder="Sua mensagem" required></textarea>
           </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-mista.jpg);">
-            <div class="item-desc">
-              <h3>Tosta Mista</h3>
-              <p>Tosta com mateiga com recheio de fiambre e queijo</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Pão com Queijo da Serra</h3>
-              <p>Pão de água, bife, queijo da serra e fianbre</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section id="drinks" class="game-section">
-        <h3 class="title">Drinks</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/drinks/pepsi.jpg);">
-            <div class="item-desc">
-              <h3>Pepsi</h3>
-              <p>Pepsi 33l.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/pepsi-zero.jpg);">
-            <div class="item-desc">
-              <h3>Pepsi Zero</h3>
-              <p>Pepsi sem açucar33l.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/guarana.png);">
-            <div class="item-desc">
-              <h3>Guaraná</h3>
-              <p>Guaraná 33l.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/icetea-manga.jpg);">
-            <div class="item-desc">
-              <h3>Ice Tea Manga</h3>
-              <p>Chá frenco sabor manga.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/icetea-peath.jpg);">
-            <div class="item-desc">
-              <h3>Ice Tea Pessêgo</h3>
-              <p>Chá fresco sabor pessêgo</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/icetea-lemon.jpg);">
-            <div class="item-desc">
-              <h3>Ice Tea Limão</h3>
-              <p>Chá frenco sabor limão.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal-laranjapng.png);">
-            <div class="item-desc">
-              <h3>Compal Lanranja</h3>
-              <p>Sumo sabor laranja.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal1-manga.png);">
-            <div class="item-desc">
-              <h3>Compal manga</h3>
-              <p>Sumo sabor manga.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal-maracuja.jpg);">
-            <div class="item-desc">
-              <h3>Compal Maracujá</h3>
-              <p>Sumo sabor maracuja.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal-frutos-vermelhos.png);">
-            <div class="item-desc">
-              <h3>Compal Frutos Vermelhos</h3>
-              <p>Sumo sabor de frutos Vermelhos.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal-maca.png);">
-            <div class="item-desc">
-              <h3>Compal Maça</h3>
-              <p>Compla sabor maça.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/drinks/compal-ananas-coco.png);">
-            <div class="item-desc">
-              <h3>Compal Ananás e Coco</h3>
-              <p>Sumo sabor ananás com coco.</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section id="drinks" class="game-section">
-        <h3>Beers</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/coffee-with/torrada.jpg);">
-            <div class="item-desc">
-              <h3>Torrada</h3>
-              <p>Pão torrada com manteiga</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/meia-torrada.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada</h3>
-              <p>Meio pão torrado com manteiga.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>Pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada Rustica</h3>
-              <p>Meio pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-mista.jpg);">
-            <div class="item-desc">
-              <h3>Tosta Mista</h3>
-              <p>Tosta com mateiga com recheio de fiambre e queijo</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Pão com Queijo da Serra</h3>
-              <p>Pão de água, bife, queijo da serra e fianbre</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section id="wine" class="game-section">
-        <h3>Wine</h3>
-        <div class="owl-carousel custom-carousel owl-theme">
-          <div class="item active" style="background-image: url(photos/coffee-with/torrada.jpg);">
-            <div class="item-desc">
-              <h3>Torrada</h3>
-              <p>Pão torrada com manteiga</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/meia-torrada.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada</h3>
-              <p>Meio pão torrado com manteiga.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>Pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/torrada-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Meia Torrada Rustica</h3>
-              <p>Meio pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-mista.jpg);">
-            <div class="item-desc">
-              <h3>Tosta Mista</h3>
-              <p>Tosta com mateiga com recheio de fiambre e queijo</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/coffee-with/tosta-rustica.jpg);">
-            <div class="item-desc">
-              <h3>Torrada Rustica</h3>
-              <p>pão torrado com manteiga e salada com especiarias.</p>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(photos/snack/pregocomqueijo.jpg);">
-            <div class="item-desc">
-              <h3>Prego no Pão com Queijo da Serra</h3>
-              <p>Pão de água, bife, queijo da serra e fianbre</p>
-            </div>  
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="containercont">
-            <iframe 
-                class="map" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.890815447118!2d-8.656040425053737!3d41.049516716886274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd247a0ec409636d%3A0x91a47959b17898da!2sO%20Rei%20Dos%20Croissants!5e0!3m2!1spt-PT!2spt!4v1721750058307!5m2!1spt-PT!2spt" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
           
-            <form action="https://formsubmit.co/reidoscroissantsde.aguda@gmail.com" method="POST">
-                  <h3>Entrar em Contato</h3>
-                  <div class="inputform">
-                      <span><ion-icon name="person"></ion-icon></span>
-                      <input type="text" name="Nome" placeholder="Digite seu nome:" required>
-                  </div>
-                  <div class="inputform">
-                      <span><ion-icon name="paper-plane"></ion-icon></span>
-                      <input type="email" name="Email" placeholder="Digite o seu email:" required>
-                  </div>
-                  <div class="inputform">
-                      <textarea name="Escreva a sua mensagem:" id="" cols="30" rows="10" required></textarea>
-                  </div>
-                  <button class="botonform" type="submit">Enviar Mensagem</button>
+          <div class="privacy-consent">
+            <label class="checkbox-container">
+              <input type="checkbox" name="privacy_consent" required>
+              <span class="checkmark"></span>
+              Li e concordo com a <a href="privacidade.html" target="_blank">Política de Privacidade</a>. Autorizo o tratamento dos meus dados pessoais para fins de contato.
+            </label>
+          </div>
 
-                  <input type="hidden" name="_subject" value="Novo contato!">
-                  <input type="text" name="_honey" style="display:none">
-                  <input type="hidden" name="_captcha" value="false">
-             </form>
+          <button class="botonform" type="submit">
+            <ion-icon name="send"></ion-icon>
+            Enviar Mensagem
+          </button>
 
-        </div>
+          <input type="hidden" name="_subject" value="Novo contato do site!">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://reidoscroissants.pt/obrigado.html">
+        </form>
+      </div>
     </section>
 
-    <section class="social">
-
-        <div class="socialcont">
-          <a href="#"><img src="photos/social/logo-whatsapp.svg" alt="Logo logo-whatsapp" width="50px" height="50px"></ion-icon>
-          <a href="#"><img src="photos/social/logo-instagram.svg" alt="logo-instagram" width="50px" height="50px"></ion-icon>
-        </div>
-      
-    </section>
-  
+    <div class="divider">
+      <div class="divider-line"></div>
+      <ion-icon name="cafe"></ion-icon>
+      <div class="divider-line"></div>
     </div>
+  </div>
       
-      <footer>
-        <p>&copy; 2022. All Rights Reserved.</p>
-      </footer>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Sobre Nós</h4>
+        <p>Desde 2010, o Rei Dos Croissants tem sido sinônimo de qualidade e tradição em Vila Nova de Gaia.</p>
+      </div>
 
-    <script  src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js" > </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>  
-    <script src="script.js"></script>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <div class="contact-info">
+          <ion-icon name="location"></ion-icon>
+          <p>R. 25 de Abril 374 446, 4405-796 Vila Nova de Gaia</p>
+        </div>
+        <div class="contact-info">
+          <ion-icon name="call"></ion-icon>
+          <p>22 762 3148</p>
+        </div>
+        <div class="contact-info">
+          <ion-icon name="mail"></ion-icon>
+          <p>reidoscroissantsde.aguda@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Formas de Pagamento</h4>
+        <div class="payment-methods">
+          <ion-icon name="card"></ion-icon>
+          <ion-icon name="cash"></ion-icon>
+          <ion-icon name="wallet"></ion-icon>
+          <ion-icon name="restaurant"></ion-icon>
+        </div>
+        <p class="payment-text">Aceitamos cartões de crédito, débito, dinheiro e vale refeição</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Rei Dos Croissants. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

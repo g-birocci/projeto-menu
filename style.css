@@ -8,7 +8,7 @@
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth !important;
-  transition: 1.45s;
+  transition: 0.5s;
 }
 
 :root {
@@ -19,7 +19,7 @@
   --cinza-escuro: #2F2F2F;
   --cinza-medio: #555555;
   --cinza-claro: #A9A9A9;
-  --branco: #faeaea;
+  --branco: #ffffff;
 }
 
 body {
@@ -47,6 +47,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#logo img {
+  height: 50px;
+  width: auto;
 }
 
 #header {
@@ -69,18 +77,97 @@ body {
 #menu {
   display: flex;
   list-style: none;
-  gap: 0.5rem;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 #menu a {
   display: block;
-  padding: 0.5rem;
-  font-size: large;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
   color: var(--branco);
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+#menu a:hover {
+  background-color: var(--vermelho-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--branco);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+#menu a:hover::after {
+  width: 80%;
 }
 
 #btn-mob {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--branco);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+#btn-mob:hover {
+  transform: scale(1.1);
+}
+
+#hamburguer {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--branco);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--branco);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+#hamburguer::before {
+  top: -6px;
+}
+
+#hamburguer::after {
+  bottom: -6px;
+}
+
+#nav.active #hamburguer {
+  transform: rotate(45deg);
+}
+
+#nav.active #hamburguer::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+#nav.active #hamburguer::after {
+  transform: rotate(90deg);
+  bottom: 0;
 }
 
 #back { 
@@ -149,23 +236,50 @@ button {
 .title {
   margin-bottom: 2rem;
   margin-left: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--vermelho-escuro);
+  font-family: "Playwrite HR Lijeva", cursive;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--vermelho-escuro);
+  transition: width 0.3s ease;
+}
+
+.title:hover::after {
+  width: 100%;
 }
 
 .game-section {
   padding: 60px 50px;
-  overflow-x: scroll;
-  background-color: white; 
+  overflow-x: hidden;
+  background-color: white;
+  position: relative;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
+.game-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--vermelho-escuro), transparent);
 }
 
 .game-section .owl-stage {
   margin: 15px 0;
   display: flex;
   display: -webkit-flex;
+  padding: 20px 0;
 }
 
 .game-section .item {
@@ -183,6 +297,12 @@ button {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-section .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .game-section .item.active {
@@ -199,6 +319,7 @@ button {
   width: 100%;
   left: 0;
   top: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
 }
 
 .game-section .item-desc {
@@ -211,6 +332,7 @@ button {
   -webkit-transform: translateY(calc(100% - 54px));
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
+  background: linear-gradient(to top, var(--vermelho-escuro), transparent);
 }
 
 .game-section .item.active .item-desc {
@@ -220,12 +342,21 @@ button {
   -webkit-transform: none;
 }
 
+.game-section .item-desc h3 {
+  color: var(--branco);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
 .game-section .item-desc p {
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
   transition: all 0.4s ease-in-out 0.2s;
   -webkit-transition: all 0.4s ease-in-out 0.2s;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .game-section .item.active .item-desc p {
@@ -235,95 +366,170 @@ button {
 }
 
 .game-section .owl-theme.custom-carousel .owl-dots {
-  margin-top: -20px;
+  margin-top: 20px;
   position: relative;
   z-index: 5;
 }
 
+.game-section .owl-theme.custom-carousel .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: var(--cinza-claro);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.game-section .owl-theme.custom-carousel .owl-dots .owl-dot.active {
+  background: var(--vermelho-escuro);
+  transform: scale(1.2);
+}
+
 .owl-nav {
-  display: none;
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--vermelho-escuro) !important;
+  border-radius: 50% !important;
+  color: var(--branco) !important;
+  font-size: 24px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.owl-prev {
+  left: -20px;
+}
+
+.owl-next {
+  right: -20px;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background: var(--vermelho) !important;
+  transform: scale(1.1);
 }
 
 #contact {
-  padding: 0 10rem;
+  padding: 4rem 2rem;
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
 }
 
 #contact > h3 {
   text-align: center;
   color: var(--branco);
-  font-size: 3rem;
-  margin-top: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Playwrite HR Lijeva", cursive;
 }
 
 .containercont {
   display: flex;
   justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map {
+  flex: 1;
+  min-width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.map:hover {
+  transform: scale(1.02);
 }
 
 form {
-  background-color: var(--cinza-escuro);
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--branco);
   padding: 2rem;
-  width: 50rem;
-  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 form > h3 {
   text-align: center;
-  color: white;
+  color: var(--vermelho-escuro);
   font-size: 2rem;
-}
-
-#contact .containercont .map {
-  width: 100%;
-  flex: 1.45;
-  object-fit: cover;
+  margin-bottom: 2rem;
+  font-family: "Playwrite HR Lijeva", cursive;
 }
 
 .inputform {
   display: flex;
   align-items: center;
-  padding: 0 0 0 1rem;
-  margin-top: 1rem;
-  background-color: var(--preto);
+  margin-bottom: 1.5rem;
+  background-color: var(--branco);
+  border: 2px solid var(--cinza-claro);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.inputform:focus-within {
+  border-color: var(--vermelho-escuro);
+  box-shadow: 0 0 0 2px rgba(219, 0, 8, 0.1);
 }
 
 .inputform > span {
   font-size: 1.5rem;
-  color: var(--branco);
+  color: var(--vermelho-escuro);
+  padding: 0 1rem;
 }
 
-.inputform > input {
+.inputform > input,
+.inputform > textarea {
   width: 100%;
-  padding: 1.5rem;
-  background-color: var(--preto);
-  border: none; 
-  color: var(--branco); 
+  padding: 1rem;
+  background-color: var(--branco);
+  border: none;
+  color: var(--cinza-escuro);
+  font-size: 1rem;
+  outline: none;
 }
 
 .inputform > textarea {
-  width: 100%;
-  padding: 1.5rem;
-  background-color: var(--preto);
-  border: none; 
-  color: var(--branco); 
-}
-.botonform {
-  margin-top: 2rem;
-  background-color: var(--vermelho-escuro);
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem; 
-  cursor: pointer;
-  text-align: center;
-  color: var(--branco);
-  
+  resize: vertical;
+  min-height: 120px;
 }
 
-.inputform button:hover {
-  letter-spacing: 2px;
-  transition: 0.3s all;
+.botonform {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--vermelho-escuro);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.botonform:hover {
+  background-color: var(--vermelho);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social {
@@ -338,15 +544,89 @@ form > h3 {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
   background: var(--cinza-escuro);
   color: var(--branco);
-  font-size: 12px;
+  padding: 3rem 2rem 1rem;
 }
-/******** Middle section CSS End *******/
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  color: var(--branco);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.footer-section p {
+  color: var(--cinza-claro);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-section .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-section .social-links a {
+  color: var(--branco);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section .social-links a:hover {
+  color: var(--vermelho-escuro);
+}
+
+.footer-section .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section .contact-info ion-icon {
+  color: var(--vermelho-escuro);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: var(--cinza-claro);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-section .social-links {
+    justify-content: center;
+  }
+  
+  .footer-section .contact-info {
+    justify-content: center;
+  }
+}
 
 /***** responsive css Start ******/
 
@@ -361,13 +641,13 @@ footer {
     position: absolute;
     width: 100%;
     top: 70px;
-    right: 0px;
+    right: 0;
     background: var(--vermelho-escuro);
-    height: 0px;
-    transition: 0.6s;
-    z-index: 1000;
+    height: 0;
+    transition: all 0.3s ease;
     visibility: hidden;
     overflow-y: hidden;
+    z-index: 1000;
   }
 
   #nav.active #menu {
@@ -377,49 +657,15 @@ footer {
   }
 
   #menu a {
-    padding: 1rem 0;
+    padding: 1rem;
     margin: 0 1rem;
-    border-bottom: 2px solid var(--branco);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   #btn-mob {
     display: flex;
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
+    align-items: center;
     gap: 0.5rem;
-    color: var(--branco);
-  }
-
-  #hamburguer {
-    border-top: 2px solid var(--branco);
-    width: 20px;
-  }
-
-  #hamburguer::after, #hamburguer::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: var(--branco);
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-  }
-
-  #nav.active #hamburguer {
-    border-top-color: transparent;
-  }
-
-  #nav.active #hamburguer::before {
-    transform: rotate(135deg);
-  }
-
-  #nav.active #hamburguer::after {
-    transform: rotate(-135deg);
-    top: -7px;
   }
 }
 
@@ -517,7 +763,636 @@ footer {
   }
 
   #contact {
-  padding: 0 2rem;   
+    padding: 2rem 1rem;
   }
 
+  .containercont {
+    gap: 1rem;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  form > h3 {
+    font-size: 1.8rem;
+  }
+
+  .inputform {
+    margin-bottom: 1rem;
+  }
+
+  .inputform > span {
+    font-size: 1.2rem;
+  }
+
+  .inputform > input,
+  .inputform > textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .botonform {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('frenteloja.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--branco);
+  padding: 0 1rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--vermelho-escuro);
+  color: var(--branco);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--vermelho-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+.daily-specials {
+  padding: 4rem 2rem;
+  background-color: var(--branco);
+}
+
+.daily-specials h3 {
+  text-align: center;
+  color: var(--vermelho-escuro);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.specials-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.special-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background: var(--branco);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.special-card:hover {
+  transform: translateY(-10px);
+}
+
+.special-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.special-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.special-card:hover .special-image img {
+  transform: scale(1.1);
+}
+
+.special-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.special-content h4 {
+  color: var(--vermelho-escuro);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.special-content p {
+  color: var(--cinza-medio);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.price {
+  display: inline-block;
+  background-color: var(--vermelho-escuro);
+  color: var(--branco);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('frenteloja.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--branco);
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h3 {
+  color: var(--branco);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.about-content > p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature ion-icon {
+  font-size: 3rem;
+  color: var(--vermelho-escuro);
+  margin-bottom: 1rem;
+}
+
+.feature h4 {
+  color: var(--branco);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.feature p {
+  color: var(--cinza-claro);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .daily-specials {
+    padding: 2rem 1rem;
+  }
+
+  .daily-specials h3 {
+    font-size: 2rem;
+  }
+
+  .special-card {
+    min-width: 280px;
+  }
+
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content > p {
+    font-size: 1.1rem;
+  }
+
+  .features {
+    gap: 1.5rem;
+  }
+
+  .feature {
+    min-width: 200px;
+    padding: 1.5rem;
+  }
+
+  .feature ion-icon {
+    font-size: 2.5rem;
+  }
+
+  .feature h4 {
+    font-size: 1.3rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+  }
+}
+
+.our-stores {
+  padding: 4rem 2rem;
+  background-color: var(--branco);
+}
+
+.our-stores h3 {
+  text-align: center;
+  color: var(--vermelho-escuro);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.stores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-card {
+  display: flex;
+  background: var(--branco);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+}
+
+.store-info {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.store-info h4 {
+  color: var(--vermelho-escuro);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.store-info p {
+  color: var(--cinza-medio);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.store-info ion-icon {
+  color: var(--vermelho-escuro);
+  font-size: 1.4rem;
+}
+
+.directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--vermelho-escuro);
+  color: var(--branco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.directions-btn:hover {
+  background-color: var(--vermelho);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store-map {
+  flex: 1.5;
+  min-height: 300px;
+}
+
+.store-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .store-card {
+    flex-direction: column;
+  }
+
+  .store-info {
+    padding: 1.5rem;
+  }
+
+  .store-map {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-stores {
+    padding: 2rem 1rem;
+  }
+
+  .our-stores h3 {
+    font-size: 2rem;
+  }
+
+  .store-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .store-info p {
+    font-size: 1rem;
+  }
+
+  .store-map {
+    min-height: 200px;
+  }
+}
+
+.page-header {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('frenteloja.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--branco);
+  padding: 0 1rem;
+}
+
+.header-content {
+  max-width: 800px;
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    height: 40vh;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+  }
+}
+
+.privacy-content {
+  padding: 4rem 2rem;
+  background-color: var(--branco);
+}
+
+.privacy-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-content h2 {
+  color: var(--vermelho-escuro);
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.privacy-content p {
+  color: var(--cinza-medio);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul li {
+  color: var(--cinza-medio);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .privacy-content {
+    padding: 2rem 1rem;
+  }
+  
+  .privacy-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.privacy-consent {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--cinza-medio);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+.checkbox-container a {
+  color: var(--vermelho-escuro);
+  text-decoration: underline;
+}
+
+.checkbox-container a:hover {
+  color: var(--vermelho);
+}
+
+.payment-methods {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.payment-methods ion-icon {
+  font-size: 2rem;
+  color: var(--vermelho-escuro);
+  transition: transform 0.3s ease;
+}
+
+.payment-methods ion-icon:hover {
+  transform: scale(1.1);
+}
+
+.payment-text {
+  color: var(--cinza-claro);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--branco);
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.social-link ion-icon {
+  font-size: 1.5rem;
+  color: var(--vermelho-escuro);
+}
+
+.social-link span {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .payment-methods {
+    justify-content: center;
+  }
+  
+  .social-links {
+    align-items: center;
+  }
+  
+  .social-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+  padding: 0 20px;
+  position: relative;
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--vermelho-escuro), transparent);
+  flex-grow: 1;
+  max-width: 300px;
+  opacity: 0.5;
+}
+
+.divider ion-icon {
+  color: var(--vermelho-escuro);
+  font-size: 28px;
+  margin: 0 30px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.divider:hover ion-icon {
+  transform: scale(1.2);
+  opacity: 1;
 }
