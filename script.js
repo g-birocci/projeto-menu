@@ -1,3 +1,36 @@
+// Menu Mobile - Código independente do jQuery
+document.addEventListener('DOMContentLoaded', function() {
+  const btnMobile = document.getElementById('btn-mob');
+  const nav = document.getElementById('nav');
+  const menu = document.getElementById('menu');
+
+  function toggleMenu(event) {
+    if (event.type === 'touchstart') event.preventDefault();
+    nav.classList.toggle('active');
+    menu.classList.toggle('active');
+  }
+
+  btnMobile.addEventListener('click', toggleMenu);
+  btnMobile.addEventListener('touchstart', toggleMenu);
+
+  // Fechar menu ao clicar em um link
+  document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      menu.classList.remove('active');
+    });
+  });
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target) && !btnMobile.contains(event.target)) {
+      nav.classList.remove('active');
+      menu.classList.remove('active');
+    }
+  });
+});
+
+// Código do Carrossel e outras funcionalidades jQuery
 $(document).ready(function() {
   // Configuração do Owl Carousel
   $(".custom-carousel").owlCarousel({
@@ -31,36 +64,6 @@ $(document).ready(function() {
     function() { $(this).trigger("stop.owl.autoplay"); },
     function() { $(this).trigger("play.owl.autoplay"); }
   );
-
-  // Menu Mobile
-  const btnMobile = document.getElementById('btn-mob');
-  const nav = document.getElementById('nav');
-  const menu = document.getElementById('menu');
-
-  function toggleMenu(event) {
-    if (event.type === 'touchstart') event.preventDefault();
-    nav.classList.toggle('active');
-    menu.classList.toggle('active');
-  }
-
-  btnMobile.addEventListener('click', toggleMenu);
-  btnMobile.addEventListener('touchstart', toggleMenu);
-
-  // Fechar menu ao clicar em um link
-  document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      menu.classList.remove('active');
-    });
-  });
-
-  // Fechar menu ao clicar fora
-  document.addEventListener('click', (event) => {
-    if (!nav.contains(event.target) && !btnMobile.contains(event.target)) {
-      nav.classList.remove('active');
-      menu.classList.remove('active');
-    }
-  });
 
   // Scroll Suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
