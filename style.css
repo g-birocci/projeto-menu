@@ -259,8 +259,7 @@ button {
 }
 
 .game-section {
-  padding: 60px 50px;
-  overflow-x: hidden;
+  padding: 60px 20px;
   background-color: white;
   position: relative;
 }
@@ -276,28 +275,21 @@ button {
 }
 
 .game-section .owl-stage {
-  margin: 15px 0;
-  display: flex;
-  display: -webkit-flex;
   padding: 20px 0;
 }
 
 .game-section .item {
-  margin: 0 15px 60px;
-  width: 320px;
+  margin: 0 15px;
   height: 400px;
-  display: flex;
-  display: -webkit-flex;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
-  background: var(--cinza-escuro) no-repeat center center / cover;
+  background-size: cover;
+  background-position: center;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  cursor: pointer;
+  transition: all 0.4s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
 }
 
 .game-section .item:hover {
@@ -305,15 +297,8 @@ button {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.game-section .item.active {
-  width: 500px;
-  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-}
-
-.game-section .item:after {
+.game-section .item::after {
   content: "";
-  display: block;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -323,23 +308,12 @@ button {
 }
 
 .game-section .item-desc {
-  padding: 0 24px 12px;
+  padding: 20px;
   color: var(--branco);
   position: relative;
   z-index: 1;
-  overflow: hidden;
-  transform: translateY(calc(100% - 54px));
-  -webkit-transform: translateY(calc(100% - 54px));
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   background: linear-gradient(to top, var(--vermelho-escuro), transparent);
-}
-
-.game-section .item.active .item-desc {
   width: 100%;
-  background-color: var(--vermelho-escuro);
-  transform: none;
-  -webkit-transform: none;
 }
 
 .game-section .item-desc h3 {
@@ -350,43 +324,12 @@ button {
 }
 
 .game-section .item-desc p {
-  opacity: 0;
-  -webkit-transform: translateY(32px);
-  transform: translateY(32px);
-  transition: all 0.4s ease-in-out 0.2s;
-  -webkit-transition: all 0.4s ease-in-out 0.2s;
   font-size: 1.1rem;
   line-height: 1.4;
-}
-
-.game-section .item.active .item-desc p {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.game-section .owl-theme.custom-carousel .owl-dots {
-  margin-top: 20px;
-  position: relative;
-  z-index: 5;
-}
-
-.game-section .owl-theme.custom-carousel .owl-dots .owl-dot {
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background: var(--cinza-claro);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.game-section .owl-theme.custom-carousel .owl-dots .owl-dot.active {
-  background: var(--vermelho-escuro);
-  transform: scale(1.2);
+  opacity: 0.9;
 }
 
 .owl-nav {
-  display: block !important;
   position: absolute;
   top: 50%;
   width: 100%;
@@ -419,6 +362,52 @@ button {
 .owl-prev:hover, .owl-next:hover {
   background: var(--vermelho) !important;
   transform: scale(1.1);
+}
+
+.owl-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.owl-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: var(--cinza-claro) !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  background: var(--vermelho-escuro) !important;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .game-section {
+    padding: 40px 10px;
+  }
+
+  .game-section .item {
+    height: 300px;
+    margin: 0 10px;
+  }
+
+  .game-section .item-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .game-section .item-desc p {
+    font-size: 1rem;
+  }
+
+  .owl-prev {
+    left: 0;
+  }
+
+  .owl-next {
+    right: 0;
+  }
 }
 
 #contact {
@@ -883,7 +872,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/background/pexels-untal3d-23158189.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('frenteloja.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -948,6 +937,19 @@ footer {
   
   .hero-content p {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('photos/background/pexels-untal3d-23158189.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
 }
 

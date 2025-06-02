@@ -32,6 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Código do Carrossel e outras funcionalidades jQuery
 $(document).ready(function() {
+  // Verificar se o jQuery está carregado
+  if (typeof jQuery === 'undefined') {
+    console.error('jQuery não está carregado!');
+    return;
+  }
+
+  // Verificar se o Owl Carousel está carregado
+  if (typeof $.fn.owlCarousel === 'undefined') {
+    console.error('Owl Carousel não está carregado!');
+    return;
+  }
+
   // Configuração do Owl Carousel
   $(".custom-carousel").owlCarousel({
     loop: true,
@@ -51,12 +63,6 @@ $(document).ready(function() {
       '<i class="ion-ios-arrow-back"></i>',
       '<i class="ion-ios-arrow-forward"></i>'
     ]
-  });
-
-  // Adicionar classe 'active' ao item do carrossel
-  $(".custom-carousel .item").click(function() {
-    $(".custom-carousel .item").removeClass("active");
-    $(this).addClass("active");
   });
 
   // Pausar autoplay no hover
